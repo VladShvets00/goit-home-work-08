@@ -7,10 +7,25 @@ body {
   background: var(--main-bg-cl);
 }
 
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .container {
   /* outline: 1px solid red; */
 
-  width: 1200px;
+  @include mq(mob) {
+    width: 480px;
+  }
+
+  @include mq(tab) {
+    width: 768px;
+  }
+
+  @include mq(desk) {
+    width: 1200px;
+  }
 
   padding-left: 15px;
   padding-right: 15px;

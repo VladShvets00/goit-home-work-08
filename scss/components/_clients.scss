@@ -4,26 +4,71 @@ Clients
 ===============
  */
 .clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  @include section;
+}
+
+.clients__title {
+  color: var(--secondary-txt-cl);
+  text-align: center;
+  font-family: var(--main-font);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.84px;
+  margin-bottom: 30px;
+
+  @include mq(desk) {
+    font-size: 36px;
+    letter-spacing: 1.08px;
+
+    margin-bottom: 50px;
+  }
 }
 
 .clients__list {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include mq(mob-only) {
+    flex-wrap: wrap;
+  }
+
+  @include mq(tab-only) {
+    flex-wrap: wrap;
+  }
 }
-.clients__title {
-  color: var(--secondary-txt-cl);
-  text-align: center;
-  font-family: var(--main-font);
-  font-size: 36px;
-  font-weight: 700;
-  letter-spacing: 1.08px;
-  margin-bottom: 50px;
+
+.clients__item:not(:last-child) {
+  margin-right: 30px;
+
+  @include mq(mob-only) {
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+    &:nth-child(-n + 4) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include mq(tab-only) {
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+
+    &:nth-child(-n + 3) {
+      margin-bottom: 30px;
+    }
+  }
 }
 
 .clients__link {
+  @include mq(mob-only) {
+    width: 210px;
+  }
+  @include mq(tab-only) {
+    width: 226px;
+  }
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,9 +90,6 @@ Clients
 .clients__link:hover .clients__logo,
 .clients__link:focus .clients__logo {
   fill: var(--accent-cl);
-}
-.clients__item:not(:last-child) {
-  margin-right: 30px;
 }
 
 .clients__logo {
