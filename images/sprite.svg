@@ -149,8 +149,8 @@
 </symbol>
 
 <!-- mobile icon -->
-<symbol id="icon-mobile_menu" width="40" height="40" viewBox="0 0 40 40" fill="none">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M8 14.6667V12H32V14.6667H8ZM8 21.3333H32V18.6667H8V21.3333ZM8 28H32V25.3333H8V28Z" fill="#212121"/>
+<symbol id="icon-mobile_menu" width="" height="" viewBox="0 0 40 40" >
+<path  d="M8 14.6667V12H32V14.6667H8ZM8 21.3333H32V18.6667H8V21.3333ZM8 28H32V25.3333H8V28Z" fill="#212121"/>
 </symbol>
 
 
