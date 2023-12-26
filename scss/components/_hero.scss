@@ -8,6 +8,8 @@ HERO
   height: 400px;
   align-items: center;
   padding-top: 118px;
+  margin-left: auto;
+  margin-right: auto;
 
   background-repeat: no-repeat;
   background-position: center;
@@ -39,8 +41,7 @@ HERO
       background-image: url(../images/hero-img/img-hero_desk@2x.png),
         linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
     }
-    margin-left: auto;
-    margin-right: auto;
+
     max-width: 1600px;
     height: 600px;
     padding-top: 200px;

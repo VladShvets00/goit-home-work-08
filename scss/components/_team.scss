@@ -4,9 +4,7 @@ Team
 ===============
  */
 .team {
-  padding-top: 94px;
-  padding-bottom: 94px;
-
+  @include section;
   background: #f5f4fa;
 }
 
@@ -14,10 +12,16 @@ Team
   color: var(--secondary-txt-cl);
   text-align: center;
   font-family: var(--main-font);
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 700;
-  letter-spacing: 1.08px;
-  margin-bottom: 50px;
+  letter-spacing: 0.84px;
+  margin-bottom: 30px;
+
+  @include mq(desk) {
+    font-size: 36px;
+    letter-spacing: 1.08px;
+    margin-bottom: 50px;
+  }
 }
 .member-about {
   padding-top: 30px;
@@ -49,17 +53,36 @@ Team
 }
 
 .member-list {
-  display: flex;
-  align-items: center;
+  display: block;
+
+  @include mq(tab-only) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  @include mq(desk) {
+    display: flex;
+    align-items: center;
+  }
 }
 .member-item {
-  margin-right: 30px;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 
-  &:last-child {
-    margin-right: 0;
+  @include mq(mob-only) {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @include mq(desk) {
+    margin-right: 30px;
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 

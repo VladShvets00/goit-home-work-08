@@ -10,6 +10,7 @@
 .about__list {
   @include mq(tab-only) {
     flex-wrap: wrap;
+    gap: 30px;
   }
 
   @include mq(tab) {
@@ -28,19 +29,12 @@
 
   @include mq(tab-only) {
     width: 354px;
-    &:nth-child(2n) {
-      margin-right: 0;
-    }
-  }
-
-  @include mq(tab) {
-    margin-right: 30px;
   }
 
   @include mq(desk) {
     display: block;
     align-items: center;
-
+    margin-right: 30px;
     &:last-child {
       margin-right: 0;
     }

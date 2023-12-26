@@ -4,6 +4,13 @@ Features
 ===============
  */
 .features {
+  @include mq(mob-only) {
+    display: none;
+  }
+  @include mq(tab-only) {
+    display: none;
+  }
+
   padding-bottom: 94px;
 }
 

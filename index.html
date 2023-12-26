@@ -226,7 +226,7 @@
       
       <!-- Секція Features -->
       
-      <!-- <section class="features">
+       <section class="features">
 <div class="container">
 
           <h2 class="features__title">Чим ми займаємось</h2>
@@ -266,22 +266,44 @@
           </li>
         </ul>
 </div>
-      </section> -->
+      </section> 
       
       <!-- Секція команда -->
       
-      <!-- <section class="team">
+       <section class="team">
         <div class="container team-container">
         <h2 class="team-title">Наша команда</h2>
         <ul class="member-list list">
           <li class="member-item">
-            <img
-              class="member-img"
-              src="./images/team-img/member1.jpg"
-              alt="Product Designer"
-              width="270"
-              height="260"
-            />
+            <picture>
+              <source  
+              media="(min-width: 1200px)"
+              srcset="./images/team-img/member1_desk.jpg 1x,
+                      ./images/team-img/member1_desk@2x.jpg 2x"
+
+              type="image/jpg">
+              <source  
+              media="(min-width: 768px)"
+              srcset="./images/team-img/member1_tab.jpg 1x,
+                      ./images/team-img/member1_tab@2x.jpg 2x"
+
+              type="image/jpg">
+              
+              <source  
+              media="(max-width: 767px)"
+              srcset="./images/team-img/member1_mob.jpg 1x,
+                      ./images/team-img/member1_mob@2x.jpg 2x"
+
+              type="image/jpg">
+
+              <img
+                class="member-img"
+                src="./images/team-img/member1_mob.jpg"
+                alt="Product Designer"
+                loading="lazy"
+            
+              />
+            </picture>
             <div class="member-about">
               <h3 class="member-title">Ігор Дем'яненко</h3>
             <p class="member-position">Product Designer</p>
@@ -362,13 +384,34 @@
 
           </li>
           <li class="member-item">
-            <img
-              class="member-img"
-              src="./images/team-img/member4.jpg"
-              alt="Ольга Рєпіна"
-              width="270"
-              height="260"
-            />
+            <picture>
+              <source  
+              media="(min-width: 1200px)"
+              srcset="./images/team-img/member2_desk.jpg 1x,
+                      ./images/team-img/member2_desk@2x.jpg 2x"
+
+              type="image/jpg">
+              <source  
+              media="(min-width: 768px)"
+              srcset="./images/team-img/member2_tab.jpg 1x,
+                      ./images/team-img/member2_tab@2x.jpg 2x"
+
+              type="image/jpg">
+              
+              <source  
+              media="(max-width: 767px)"
+              srcset="./images/team-img/member2_mob.jpg 1x,
+                      ./images/team-img/member2_mob@2x.jpg 2x"
+
+              type="image/jpg">
+
+              <img
+                class="member-img"
+                src="./images/team-img/member2_mob.jpg"
+                alt="Ольга Рєпіна"
+                loading="lazy"
+              />
+            </picture>
           <div class="member-about">
             <h3 class="member-title">Ольга Рєпіна</h3>
             <p class="member-position">Frontend Developer</p>
@@ -447,13 +490,35 @@
           </div>
           </li>
           <li class="member-item">
-            <img
-              class="member-img"
-              src="./images/team-img/member3.jpg"
-              alt="Микола Тарасов"
-              width="270"
-              height="260"
-            />
+            <picture>
+              <source  
+              media="(min-width: 1200px)"
+              srcset="./images/team-img/member3_desk.jpg 1x,
+                      ./images/team-img/member3_desk@2x.jpg 2x"
+
+              type="image/jpg">
+              <source  
+              media="(min-width: 768px)"
+              srcset="./images/team-img/member3_tab.jpg 1x,
+                      ./images/team-img/member3_tab@2x.jpg 2x"
+
+              type="image/jpg">
+              
+              <source  
+              media="(max-width: 767px)"
+              srcset="./images/team-img/member3_mob.jpg 1x,
+                      ./images/team-img/member3_mob@2x.jpg 2x"
+
+              type="image/jpg">
+
+              <img
+                class="member-img"
+                src="./images/team-img/member3_mob.jpg"
+                alt="Микола Тарасов"
+                loading="lazy"
+              />
+            </picture>
+            
            <div class="member-about">
             <h3 class="member-title">Микола Тарасов</h3>
             <p class="member-position">Marketing</p>
@@ -532,13 +597,35 @@
            </div>
           </li>
           <li class="member-item">
-            <img
-              class="member-img"
-              src="./images/team-img/member2.jpg"
-              alt="Михайло Єрмаков"
-              width="270"
-              height="260"
-            />
+            <picture class="member-picture">
+              <source  
+              media="(min-width: 1200px)"
+              srcset="./images/team-img/member4_desk.jpg 1x,
+                      ./images/team-img/member4_desk@2x.jpg 2x"
+
+              type="image/jpg">
+              <source  
+              media="(min-width: 768px)"
+              srcset="./images/team-img/member4_tab.jpg 1x,
+                      ./images/team-img/member4_tab@2x.jpg 2x"
+
+              type="image/jpg">
+              
+              <source  
+              media="(max-width: 767px)"
+              srcset="./images/team-img/member4_mob.jpg 1x,
+                      ./images/team-img/member4_mob@2x.jpg 2x"
+
+              type="image/jpg">
+
+              <img
+                class="member-img"
+                src="./images/team-img/member4_mob.jpg"
+                alt="Михайло Єрмаков"
+                loading="lazy"
+              />
+            </picture>
+
          <div class="member-about">
           <h3 class="member-title">Михайло Єрмаков</h3>
           <p class="member-position">UI Designer</p>
@@ -619,7 +706,7 @@
         </ul>
 
         </div>
-      </section> -->
+      </section> 
 
  <!-- Секція клієнти -->
  
