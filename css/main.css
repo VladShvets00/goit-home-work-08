@@ -1101,10 +1101,20 @@ Footer
   display: block;
   margin-bottom: 28px;
   font-family: var(--secondary-font);
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 700;
-  letter-spacing: 0.78px;
+  letter-spacing: 0.72px;
   color: var(--accent-cl);
+}
+@media screen and (min-width: 1170px) {
+  .footer-logo {
+    font-size: 26px;
+    letter-spacing: 0.78px;
+  }
+}
+
+.footer__logo-white {
+  color: var(--title-txt-cl);
 }
 
 .main-address {
@@ -1126,6 +1136,7 @@ Footer
 }
 
 .address-link {
+  text-align: center;
   color: rgba(255, 255, 255, 0.6);
   font-family: var(--main-font);
   font-weight: 400;
@@ -1139,6 +1150,21 @@ Footer
   color: var(--title-txt-cl);
 }
 
+@media screen and (max-width: 737.98px) {
+  .address {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .title-footer {
   color: var(--title-txt-cl);
   margin-bottom: 20px;
@@ -1150,18 +1176,61 @@ Footer
   letter-spacing: 0.42px;
   text-transform: uppercase;
 }
+@media screen and (max-width: 737.98px) {
+  .title-footer {
+    margin-top: 60px;
+  }
+}
 
-.footer__container {
+@media screen and (max-width: 737.98px) {
+  .footer__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media screen and (min-width: 738px) {
+  .footer__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.footer-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-}
-
-.footer-content:not(:last-child) {
-  margin-right: 70px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .footer-link {
@@ -1172,13 +1241,8 @@ Footer
   fill: var(--title-txt-cl);
 }
 
-.footer__logo-white {
-  color: var(--title-txt-cl);
-}
-
 /* footer form */
 .footer-form {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1189,12 +1253,18 @@ Footer
       -ms-flex-align: center;
           align-items: center;
 }
+@media screen and (max-width: 1169.98px) {
+  .footer-form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 
 .footer-input {
   width: 358px;
   height: 50px;
-  margin-right: 12px;
-  padding-left: 16px;
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
@@ -1202,6 +1272,13 @@ Footer
   outline: transparent;
   color: var(--title-txt-cl);
   background: rgba(33, 150, 243, 0);
+}
+@media screen and (max-width: 1169.98px) {
+  .footer-input {
+    width: 450px;
+    height: 50px;
+    margin-bottom: 20px;
+  }
 }
 
 .form-btn-label {
@@ -1236,10 +1313,6 @@ Footer
 
 .icon-send {
   margin-left: 10px;
-}
-
-.form-content {
-  margin-left: 23px;
 }
 
 /* 
