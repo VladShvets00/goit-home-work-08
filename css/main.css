@@ -314,11 +314,27 @@ Section header
 }
 
 .mobile_menu {
-  width: 480px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
   padding-top: 48px;
   padding-bottom: 48px;
   padding-left: 40px;
-  outline: 1px solid red;
+  z-index: 999;
+  background-color: #fff;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.mobile_menu.is-open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .mobile_list:not(:last-child) {
@@ -367,10 +383,13 @@ Section header
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 .mobile-social__list:not(:last-child) {
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .mobile-social__link {
@@ -381,6 +400,35 @@ Section header
   font-weight: 500;
   line-height: 1.22;
   letter-spacing: 0.36px;
+}
+
+.mobile-social__list:not(:first-child):before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 22px;
+  background-color: rgba(33, 33, 33, 0.2);
+  margin-right: 10px;
+}
+
+.btn-menu__close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.btn-menu__close:hover, .btn-menu__close:focus {
+  fill: var(--accent-cl);
 }
 
 /* 
@@ -509,14 +557,13 @@ HERO
 }
 
 .modal-wrapper {
+  height: 609px;
+  width: 450px;
   padding: 40px;
   position: absolute;
   top: 50%;
   left: 50%;
-  /* transform: translate(-50%, -50%); */
   border-radius: 4px;
-  width: 528px;
-  height: 581px;
   -webkit-box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   background-color: var(--main-bg-cl);
@@ -524,6 +571,12 @@ HERO
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 1170px) {
+  .modal-wrapper {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal-btn {
@@ -554,6 +607,7 @@ HERO
 
 /* modal-wraper form */
 .form-title {
+  line-height: 150%;
   display: block;
   margin-bottom: 12px;
   text-align: center;
@@ -561,9 +615,13 @@ HERO
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
   letter-spacing: 0.6px;
   color: var(--secondary-txt-cl);
+}
+@media screen and (min-width: 1170px) {
+  .form-title {
+    line-height: normal;
+  }
 }
 
 .modal-wrapper-group,
@@ -596,7 +654,7 @@ HERO
   font-size: 12px;
   font-style: normal;
   line-height: normal;
-  letter-spacing: 0.42px;
+  letter-spacing: 0.12px;
   color: var(--main-txt-cl);
 }
 
@@ -638,11 +696,18 @@ HERO
 
 .modal-policy-desc {
   font-family: var(--main-font);
-  font-size: 14px;
   font-style: normal;
-  line-height: 1.71;
-  letter-spacing: 0.42px;
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: 0.36px;
   color: var(--main-txt-cl);
+}
+@media screen and (min-width: 1170px) {
+  .modal-policy-desc {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.42px;
+  }
 }
 
 .modal-policy-link {
@@ -697,8 +762,8 @@ HERO
 .modal-wrapper-btn {
   width: 200px;
   height: 50px;
-  margin-left: 124px;
-  margin-top: 30px;
+  margin-left: 85px;
+  margin-top: 23px;
   color: var(--title-txt-cl);
   text-align: center;
   font-family: var(--main-font);
@@ -711,6 +776,12 @@ HERO
   border: none;
   -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+@media screen and (min-width: 1170px) {
+  .modal-wrapper-btn {
+    margin-left: 124px;
+    margin-top: 30px;
+  }
 }
 
 /* 
