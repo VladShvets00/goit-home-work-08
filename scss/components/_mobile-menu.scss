@@ -3,6 +3,8 @@
   top: 0;
   right: 0;
 
+  overflow-y: scroll;
+
   // width: 480px;
   // opacity: 0;
   width: 100vw;
@@ -40,10 +42,18 @@
   line-height: normal;
   letter-spacing: 0.8px;
 
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   &:hover,
   &:focus {
     color: var(--accent-cl);
   }
+}
+
+.mobile_link-active {
+  color: var(--accent-cl);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mobile_link__tel {
   color: var(--accent-cl);

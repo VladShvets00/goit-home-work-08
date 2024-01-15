@@ -4,7 +4,6 @@ HERO
 ===============
  */
 .hero {
-  max-width: 480px;
   height: 400px;
   align-items: center;
   padding-top: 118px;
@@ -16,7 +15,6 @@ HERO
   background-size: cover;
   background-image: url(../images/hero-img/img-hero_mob.png),
     linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
-
   @include mq(retina) {
     background-image: url(../images/hero-img/img-hero_mob@2x.png),
       linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
@@ -30,7 +28,6 @@ HERO
       background-image: url(../images/hero-img/img-hero_tab@2x.png),
         linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
     }
-    max-width: 768px;
   }
 
   @include mq(desk) {
@@ -65,7 +62,8 @@ HERO
     font-size: 44px;
     line-height: 1.36;
     letter-spacing: 2.64px;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

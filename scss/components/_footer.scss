@@ -110,7 +110,10 @@ Footer
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+
+  @include mq(not-desk) {
+    align-items: center;
+  }
 }
 
 .footer-content:not(:last-child) {
@@ -157,6 +160,9 @@ Footer
     width: 450px;
     height: 50px;
     margin-bottom: 20px;
+  }
+  @include mq(mob-only) {
+    width: 80vw;
   }
 
   @include mq(desk) {

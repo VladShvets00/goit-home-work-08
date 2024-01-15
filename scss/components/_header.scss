@@ -105,7 +105,16 @@ Section header
     display: flex;
   }
 }
+
 .contact__item {
+  @include mq(tab-only) {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   @include mq(desk) {
     margin-right: 40px;
 
