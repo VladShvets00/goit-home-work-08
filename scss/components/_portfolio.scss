@@ -177,9 +177,9 @@ Portfolio section
 }
 
 .gallery__about {
-  @include mq(tab-only) {
-    padding-right: 0px;
-  }
+  // @include mq(tab-only) {
+  //   padding-right: 0px;
+  // }
   padding-top: 20px;
   padding-right: 24px;
   padding-bottom: 20px;
@@ -190,6 +190,9 @@ Portfolio section
 }
 
 .gallery__img {
+  @include mq(mob-only) {
+    max-width: 450px;
+  }
   @include mq(tab-only) {
     max-width: 354px;
   }

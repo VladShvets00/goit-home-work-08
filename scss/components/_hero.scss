@@ -13,30 +13,54 @@ HERO
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url(../images/hero-img/img-hero_mob.png),
-    linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero-img/img-hero_mob.png);
   @include mq(retina) {
-    background-image: url(../images/hero-img/img-hero_mob@2x.png),
-      linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero-img/img-hero_mob@2x.png);
   }
 
   @include mq(tab) {
-    background-image: url(../images/hero-img/img-hero_tab.png),
-      linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero-img/img-hero_tab.png);
 
     @include mq(retina) {
-      background-image: url(../images/hero-img/img-hero_tab@2x.png),
-        linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/hero-img/img-hero_tab@2x.png);
     }
   }
 
   @include mq(desk) {
-    background-image: url(../images/hero-img/img-hero_desk.png),
-      linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero-img/img-hero_desk.png);
 
     @include mq(retina) {
-      background-image: url(../images/hero-img/img-hero_desk@2x.png),
-        linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/hero-img/img-hero_desk@2x.png);
     }
 
     max-width: 1600px;
@@ -56,6 +80,11 @@ HERO
   letter-spacing: 1.56px;
   text-transform: uppercase;
   margin-bottom: 30px;
+
+  @include mq(tab-only) {
+    // margin-right: 204px;
+    // margin-left: 204px;
+  }
 
   @include mq(desk) {
     width: 696px;
