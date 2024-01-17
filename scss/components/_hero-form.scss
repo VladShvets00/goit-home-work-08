@@ -29,8 +29,11 @@
 }
 
 .modal-wrapper {
+  // height: 100%;
+  // max-height: 609px;
   height: 609px;
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
   padding: 40px;
 
   position: absolute;
@@ -230,13 +233,23 @@
 .checkbox:checked + .custom-checkbox .custom-checkbox-icon {
   opacity: 1;
 }
+.btn-subm {
+  @include mq(mob-only) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
 
 .modal-wrapper-btn {
   width: 200px;
   height: 50px;
 
-  margin-left: 85px;
-  margin-top: 23px;
+  @include mq(tab) {
+    margin-left: 85px;
+    margin-top: 23px;
+  }
 
   color: var(--title-txt-cl);
   text-align: center;

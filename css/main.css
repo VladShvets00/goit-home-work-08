@@ -327,13 +327,20 @@ Section header
   fill: var(--accent-cl);
 }
 
+.icon-mob_menu {
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .mobile_menu {
   position: fixed;
   top: 0;
   right: 0;
   overflow-y: scroll;
-  width: 100vw;
-  height: 100vh;
+  max-width: 480px;
+  width: 100%;
+  max-height: 796px;
+  height: 100%;
   padding-top: 48px;
   padding-bottom: 48px;
   padding-left: 40px;
@@ -452,6 +459,11 @@ Section header
 }
 .btn-menu__close:hover, .btn-menu__close:focus {
   fill: var(--accent-cl);
+}
+
+.icon-menu__close {
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* 
@@ -580,7 +592,8 @@ HERO
 
 .modal-wrapper {
   height: 609px;
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
   padding: 40px;
   position: absolute;
   top: 50%;
@@ -781,11 +794,24 @@ HERO
   opacity: 1;
 }
 
+@media screen and (max-width: 737.98px) {
+  .btn-subm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 10px;
+  }
+}
+
 .modal-wrapper-btn {
   width: 200px;
   height: 50px;
-  margin-left: 85px;
-  margin-top: 23px;
   color: var(--title-txt-cl);
   text-align: center;
   font-family: var(--main-font);
@@ -798,6 +824,12 @@ HERO
   border: none;
   -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+@media screen and (min-width: 738px) {
+  .modal-wrapper-btn {
+    margin-left: 85px;
+    margin-top: 23px;
+  }
 }
 @media screen and (min-width: 1170px) {
   .modal-wrapper-btn {
@@ -1092,6 +1124,10 @@ Team
   .member-item:last-child {
     margin-right: 0;
   }
+}
+
+.member-img {
+  width: 100%;
 }
 
 .socials {
@@ -1721,6 +1757,11 @@ Portfolio section
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (max-width: 737.98px) {
+  .gallery__overlay-text {
+    font-size: 17px;
+  }
+}
 
 .gallery__link:hover .gallery__overlay-text,
 .gallery__link:focus .gallery__overlay-text {
@@ -1762,7 +1803,7 @@ Portfolio section
 
 @media screen and (max-width: 737.98px) {
   .gallery__img {
-    max-width: 450px;
+    width: 100%;
   }
 }
 @media screen and (min-width: 738px) and (max-width: 1169.98px) {
