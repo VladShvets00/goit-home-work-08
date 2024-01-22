@@ -18,14 +18,14 @@ HERO
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../images/hero-img/img-hero_mob.png);
+    url(../images/hero-img/img-hero_mob.jpg);
   @include mq(retina) {
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../images/hero-img/img-hero_mob@2x.png);
+      url(../images/hero-img/img-hero_mob@2x.jpg);
   }
 
   @include mq(tab) {
@@ -34,7 +34,7 @@ HERO
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../images/hero-img/img-hero_tab.png);
+      url(../images/hero-img/img-hero_tab.jpg);
 
     @include mq(retina) {
       background-image: linear-gradient(
@@ -42,7 +42,7 @@ HERO
           rgba(47, 48, 58, 0.4),
           rgba(47, 48, 58, 0.4)
         ),
-        url(../images/hero-img/img-hero_tab@2x.png);
+        url(../images/hero-img/img-hero_tab@2x.jpg);
     }
   }
 
@@ -52,7 +52,7 @@ HERO
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../images/hero-img/img-hero_desk.png);
+      url(../images/hero-img/img-hero_desk.jpg);
 
     @include mq(retina) {
       background-image: linear-gradient(
@@ -60,7 +60,7 @@ HERO
           rgba(47, 48, 58, 0.4),
           rgba(47, 48, 58, 0.4)
         ),
-        url(../images/hero-img/img-hero_desk@2x.png);
+        url(../images/hero-img/img-hero_desk@2x.jpg);
     }
 
     max-width: 1600px;
@@ -75,6 +75,7 @@ HERO
   color: var(--title-txt-cl);
   text-align: center;
   font-size: 26px;
+  font-style: normal;
   font-weight: 900;
   line-height: 1.62;
   letter-spacing: 1.56px;
@@ -82,8 +83,9 @@ HERO
   margin-bottom: 30px;
 
   @include mq(tab-only) {
-    // margin-right: 204px;
-    // margin-left: 204px;
+    width: 360px;
+    margin-left: 204px;
+    margin-right: 204px;
   }
 
   @include mq(desk) {

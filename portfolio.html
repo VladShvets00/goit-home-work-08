@@ -93,33 +93,38 @@
           </li>
         </ul>
 
-        <ul class="item mobile_item">
-          <li class="list mobile_list">
-            <a class="link mobile_link__tel" href="tel:+380961111111">
-              +38 096 111 11 11</a
-            >
-          </li>
-          <li class="list mobile_list">
-            <a class="link mobile_link__mail" href="mailto:info@devstudio.com">
-              info@devstudio.com</a
-            >
-          </li>
-        </ul>
+        <div class="mobile-item_second">
+          <ul class="item mobile_item">
+            <li class="list mobile_list">
+              <a class="link mobile_link__tel" href="tel:+380961111111">
+                +38 096 111 11 11</a
+              >
+            </li>
+            <li class="list mobile_list">
+              <a
+                class="link mobile_link__mail"
+                href="mailto:info@devstudio.com"
+              >
+                info@devstudio.com</a
+              >
+            </li>
+          </ul>
 
-        <ul class="item mobile-social">
-          <li class="list mobile-social__list">
-            <a class="mobile-social__link" href="#">Instagram</a>
-          </li>
-          <li class="list mobile-social__list">
-            <a class="mobile-social__link" href="#">Twitter</a>
-          </li>
-          <li class="list mobile-social__list">
-            <a class="mobile-social__link" href="#">Facebook</a>
-          </li>
-          <li class="list mobile-social__list">
-            <a class="mobile-social__link" href="#">LinkedIn</a>
-          </li>
-        </ul>
+          <ul class="item mobile-social">
+            <li class="list mobile-social__list">
+              <a class="mobile-social__link" href="#">Instagram</a>
+            </li>
+            <li class="list mobile-social__list">
+              <a class="mobile-social__link" href="#">Twitter</a>
+            </li>
+            <li class="list mobile-social__list">
+              <a class="mobile-social__link" href="#">Facebook</a>
+            </li>
+            <li class="list mobile-social__list">
+              <a class="mobile-social__link" href="#">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
 
         <button class="btn-menu__close js-close-menu" type="button">
           <svg class="icon-menu__close" width="40" height="40">
@@ -154,15 +159,45 @@
               <button class="btn filter__btn" type="button">Маркетинг</button>
             </li>
           </ul>
+
           <ul class="gallery list">
             <li class="gallery__item">
               <a class="link gallery__link" href="#">
                 <div class="gallery__overlay">
-                  <img
-                    class="gallery__img"
-                    src="./images/portfolio-img/img1.jpg"
-                    alt="Технокряк"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio-img/img-gallery_desk1.jpg    1x,
+                        ./images/portfolio-img/img-gallery_desk1@x2.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 738px)"
+                      srcset="
+                        ./images/portfolio-img/img-gallery_tab1.jpg    1x,
+                        ./images/portfolio-img/img-gallery_tab1@x2.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio-img/img-gallery_mob1.jpg    1x,
+                        ./images/portfolio-img/img-gallery_mob1@x2.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      class="gallery__img"
+                      src="./images/portfolio-img/img-gallery_desk1.jpg"
+                      alt="Технокряк"
+                      loading="lazy"
+                    />
+                  </picture>
 
                   <p class="gallery__overlay-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -181,13 +216,40 @@
             <li class="gallery__item">
               <a class="link gallery__link" href="#">
                 <div class="gallery__overlay">
-                  <img
-                    class="gallery__img"
-                    src="./images/portfolio-img/img2.jpg"
-                    alt="Постер New Orlean vs Golden Star"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio-img/img-gallery_desk2.jpg    1x,
+                        ./images/portfolio-img/img-gallery_desk2@x2.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 738px)"
+                      srcset="
+                        ./images/portfolio-img/img-gallery_tab2.jpg    1x,
+                        ./images/portfolio-img/img-gallery_tab2@x2.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio-img/img-gallery_mob2.jpg    1x,
+                        ./images/portfolio-img/img-gallery_mob2@x2.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      class="gallery__img"
+                      src="./images/portfolio-img/img-gallery_desk2.jpg"
+                      alt="Постер New Orlean vs Golden Star"
+                      loading="lazy"
+                    />
+                  </picture>
 
                   <p class="gallery__overlay-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -207,13 +269,41 @@
             <li class="gallery__item">
               <a class="link gallery__link" href="#">
                 <div class="gallery__overlay">
-                  <img
-                    class="gallery__img"
-                    src="./images/portfolio-img/img3.jpg"
-                    alt="Ресторан Seafood"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio-img/img-gallery_desk3.jpg    1x,
+                        ./images/portfolio-img/img-gallery_desk3@x2.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 738px)"
+                      srcset="
+                        ./images/portfolio-img/img-gallery_tab3.jpg    1x,
+                        ./images/portfolio-img/img-gallery_tab3@x2.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio-img/img-gallery_mob3.jpg    1x,
+                        ./images/portfolio-img/img-gallery_mob3@x2.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      class="gallery__img"
+                      src="./images/portfolio-img/img-gallery_desk3.jpg"
+                      alt="Ресторан Seafood"
+                      loading="lazy"
+                    />
+                  </picture>
+
                   <p class="gallery__overlay-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -230,13 +320,41 @@
             <li class="gallery__item">
               <a class="link gallery__link" href="#">
                 <div class="gallery__overlay">
-                  <img
-                    class="gallery__img"
-                    src="./images/portfolio-img/img4.jpg"
-                    alt="Проєкт Prime"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio-img/img-gallery_desk4.jpg    1x,
+                        ./images/portfolio-img/img-gallery_desk4@x2.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 738px)"
+                      srcset="
+                        ./images/portfolio-img/img-gallery_tab4.jpg    1x,
+                        ./images/portfolio-img/img-gallery_tab4@x2.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio-img/img-gallery_mob4.jpg    1x,
+                        ./images/portfolio-img/img-gallery_mob4@x2.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      class="gallery__img"
+                      src="./images/portfolio-img/img-gallery_desk4.jpg"
+                      alt="Проєкт Prime"
+                      loading="lazy"
+                    />
+                  </picture>
+
                   <p class="gallery__overlay-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -253,13 +371,41 @@
             <li class="gallery__item">
               <a class="link gallery__link" href="#">
                 <div class="gallery__overlay">
-                  <img
-                    class="gallery__img"
-                    src="./images/portfolio-img/img5.jpg"
-                    alt="Проєкт Boxes"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio-img/img-gallery_desk5.jpg    1x,
+                        ./images/portfolio-img/img-gallery_desk5@x2.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 738px)"
+                      srcset="
+                        ./images/portfolio-img/img-gallery_tab5.jpg    1x,
+                        ./images/portfolio-img/img-gallery_tab5@x2.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio-img/img-gallery_mob5.jpg    1x,
+                        ./images/portfolio-img/img-gallery_mob5@x2.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      class="gallery__img"
+                      src="./images/portfolio-img/img-gallery_desk5.jpg"
+                      alt="Проєкт Boxes"
+                      loading="lazy"
+                    />
+                  </picture>
+
                   <p class="gallery__overlay-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -276,13 +422,41 @@
             <li class="gallery__item">
               <a class="link gallery__link" href="#">
                 <div class="gallery__overlay">
-                  <img
-                    class="gallery__img"
-                    src="./images/portfolio-img/img6.jpg"
-                    alt="Inspiration has no Borders"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio-img/img-gallery_desk6.jpg    1x,
+                        ./images/portfolio-img/img-gallery_desk6@x2.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 738px)"
+                      srcset="
+                        ./images/portfolio-img/img-gallery_tab6.jpg    1x,
+                        ./images/portfolio-img/img-gallery_tab6@x2.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio-img/img-gallery_mob6.jpg    1x,
+                        ./images/portfolio-img/img-gallery_mob6@x2.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      class="gallery__img"
+                      src="./images/portfolio-img/img-gallery_desk6.jpg"
+                      alt="Inspiration has no Borders"
+                      loading="lazy"
+                    />
+                  </picture>
+                  6
                   <p class="gallery__overlay-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -299,13 +473,41 @@
             <li class="gallery__item">
               <a class="link gallery__link" href="#">
                 <div class="gallery__overlay">
-                  <img
-                    class="gallery__img"
-                    src="./images/portfolio-img/img7.jpg"
-                    alt="Видання Limited Edition"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio-img/img-gallery_desk7.jpg    1x,
+                        ./images/portfolio-img/img-gallery_desk7@x2.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 738px)"
+                      srcset="
+                        ./images/portfolio-img/img-gallery_tab7.jpg    1x,
+                        ./images/portfolio-img/img-gallery_tab7@x2.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio-img/img-gallery_mob7.jpg    1x,
+                        ./images/portfolio-img/img-gallery_mob7@x2.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      class="gallery__img"
+                      src="./images/portfolio-img/img-gallery_desk7.jpg"
+                      alt="Видання Limited Edition"
+                      loading="lazy"
+                    />
+                  </picture>
+
                   <p class="gallery__overlay-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -322,13 +524,40 @@
             <li class="gallery__item">
               <a class="link gallery__link" href="#">
                 <div class="gallery__overlay">
-                  <img
-                    class="gallery__img"
-                    src="./images/portfolio-img/img8.jpg"
-                    alt="Проєкт LAB"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio-img/img-gallery_desk8.jpg    1x,
+                        ./images/portfolio-img/img-gallery_desk8@x2.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 738px)"
+                      srcset="
+                        ./images/portfolio-img/img-gallery_tab8.jpg    1x,
+                        ./images/portfolio-img/img-gallery_tab8@x2.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio-img/img-gallery_mob8.jpg    1x,
+                        ./images/portfolio-img/img-gallery_mob8@x2.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      class="gallery__img"
+                      src="./images/portfolio-img/img-gallery_desk8.jpg"
+                      alt="Проєкт LAB"
+                      loading="lazy"
+                    /> </picture
+                  >8
                   <p class="gallery__overlay-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -345,13 +574,41 @@
             <li class="gallery__item">
               <a class="link gallery__link" href="#">
                 <div class="gallery__overlay">
-                  <img
-                    class="gallery__img"
-                    src="./images/portfolio-img/img9.jpg"
-                    alt="Growing Business"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio-img/img-gallery_desk9.jpg    1x,
+                        ./images/portfolio-img/img-gallery_desk9@x2.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 738px)"
+                      srcset="
+                        ./images/portfolio-img/img-gallery_tab9.jpg    1x,
+                        ./images/portfolio-img/img-gallery_tab9@x2.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio-img/img-gallery_mob9.jpg    1x,
+                        ./images/portfolio-img/img-gallery_mob9@x2.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      class="gallery__img"
+                      src="./images/portfolio-img/img-gallery_desk9.jpg"
+                      alt="Growing Business"
+                      loading="lazy"
+                    />
+                  </picture>
+                  9
                   <p class="gallery__overlay-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
