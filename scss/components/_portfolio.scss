@@ -167,9 +167,12 @@ Portfolio section
   font-weight: 700;
   line-height: 2;
   letter-spacing: 1.08px;
-  width: 304px;
 
   color: var(--secondary-txt-cl);
+
+  @include mq(tab-only) {
+    width: 304px;
+  }
 }
 
 .gallery__text {

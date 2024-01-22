@@ -1808,8 +1808,12 @@ Portfolio section
   font-weight: 700;
   line-height: 2;
   letter-spacing: 1.08px;
-  width: 304px;
   color: var(--secondary-txt-cl);
+}
+@media screen and (min-width: 738px) and (max-width: 1169.98px) {
+  .gallery__title {
+    width: 304px;
+  }
 }
 
 .gallery__text {
