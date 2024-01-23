@@ -347,11 +347,9 @@ Section header
       -ms-flex-pack: justify;
           justify-content: space-between;
   overflow-y: scroll;
-  max-width: 480px;
   width: 100%;
   overflow: auto;
-  max-height: 796px;
-  height: 100vh;
+  height: 100%;
   padding-top: 48px;
   padding-bottom: 48px;
   padding-left: 20px;
@@ -413,7 +411,7 @@ Section header
 .mobile_link__tel {
   color: var(--accent-cl);
   font-family: var(--main-font);
-  font-size: 34px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -668,6 +666,11 @@ HERO
 }
 .modal-btn:hover, .modal-btn:focus {
   fill: var(--accent-cl);
+}
+@media screen and (max-width: 737.98px) {
+  .modal-btn {
+    top: 28px;
+  }
 }
 
 /* modal-wraper form */
@@ -1789,7 +1792,7 @@ Portfolio section
 }
 @media screen and (max-width: 737.98px) {
   .gallery__overlay-text {
-    font-size: 17px;
+    font-size: 16px;
   }
 }
 

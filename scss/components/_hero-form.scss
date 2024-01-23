@@ -79,6 +79,10 @@
   &:focus {
     fill: var(--accent-cl);
   }
+
+  @include mq(mob-only) {
+    top: 28px;
+  }
 }
 
 /* modal-wraper form */
